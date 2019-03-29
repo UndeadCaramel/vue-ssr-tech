@@ -9,6 +9,17 @@ const isDev=process.env.NODE_ENV==="development"
 
 const baseConfig=require('./webpack.config.base.js')
 
+const defaultPlugins=[
+    new VueLoaderPlugin(),
+    new webpack.DefinePlugin({
+        'process.env':{
+             NODE_ENV: isDev ? '"develpoment"' : '"production"'
+        }
+    }),
+    new HTMLPlugin()
+]
+    
+
 const devServer={
     port:"8080",
     host:"0.0.0.0",
@@ -42,16 +53,9 @@ if(isDev){
                 },
             ]
         },
-        plugins:[
+        plugins:defaultPlugins.concat([
             new webpack.HotModuleReplacementPlugin(),
-            new VueLoaderPlugin(),
-            new webpack.DefinePlugin({
-                'process.env':{
-                    NODE_ENV: isDev ? '"develpoment"' : '"production"'
-                }
-            }),
-            new HTMLPlugin()
-        ]
+        ])
     }) 
 }else{
     config=merge(baseConfig,{
@@ -88,16 +92,9 @@ if(isDev){
             },
             runtimeChunk:true
         },
-        plugins:[
+        plugins:defaultPlugins.concat([
             new ExtractPlugin('styles.[chunkHash:8].css'),
-            new VueLoaderPlugin(),
-            new webpack.DefinePlugin({
-                'process.env':{
-                    NODE_ENV: isDev ? '"develpoment"' : '"production"'
-                }
-            }),
-            new HTMLPlugin()
-        ]
+        ])
     })
 }
 
