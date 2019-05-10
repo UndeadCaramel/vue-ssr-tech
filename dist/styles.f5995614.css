@@ -1,0 +1,57 @@
+#client-app---app---1ocly[data-v-2135370b] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#client-app---cover---2lid2[data-v-2135370b] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffa500;
+  opacity: 0.3;
+  z-index: -1;
+}
+#client-assets-styles-footer---footer---2tEqU {
+  margin-top: 40px;
+  text-align: center;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-image: url(/public/resource/client/assets/images/bg-87fcd41f.jpeg);
+  background-size: cover;
+  background-position: center;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #4d4d4d;
+  font-smoothing: antialiased;
+  font-weight: 300;
+}
+.client-assets-styles-global---fade-enter-active---3lTsm,
+.client-assets-styles-global---fade-leave-active---1g5Y3 {
+  transition: opacity 0.5s;
+}
+.client-assets-styles-global---fade-enter---35qL_,
+.client-assets-styles-global---fade-leave-to---3cr_a {
+  opacity: 0.5;
+}
+.client-layout-header---main-header---2kb12 {
+  text-align: center;
+}
+.client-layout-header---main-header---2kb12 h1 {
+  font-size: 100px;
+  color: rgba(0,90,0,0.8);
+  font-weight: 200;
+  margin: 20px;
+}
